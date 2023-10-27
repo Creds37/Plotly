@@ -1,0 +1,27 @@
+---
+title: "My Plotly Web Page"
+author: "Redson"
+date: "2023-10-27"
+output: html_document
+---
+```{r}
+options(repos = c(CRAN = "https://cran.r-project.org/"))
+```
+
+
+```{r setup, include=FALSE}
+install.packages("rmarkdown")
+install.packages("plotly")
+install.packages("htmlwidgets")
+```
+
+
+#creating an interactive plot with Plotly
+```{r}
+library(plotly)
+
+plot_ly(data = mtcars, x = ~mpg, y = ~hp, type = "scatter", mode = "markers")
+```
+
+
+
